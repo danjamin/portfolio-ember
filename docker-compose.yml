@@ -1,0 +1,30 @@
+ember-cli-shared: &EMBER-CLI-SHARED # !!merge
+  image: geoffreyd/ember-cli:2.3.0
+  volumes:
+    - .:/usr/src/app
+
+nginx:
+  restart: always
+  image: nginx:1.9
+  ports:
+    - "80:80"
+  volumes:
+    - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    - ./nginx/upstream-dev.conf:/etc/nginx/conf.d/upstream.conf
+  links:
+    - server
+server:
+  <<: *EMBER-CLI-SHARED
+  ports:
+    - 4200:4200
+    - 49152:49152
+  command: ember s --watcher polling
+ember:
+  <<: *EMBER-CLI-SHARED
+  entrypoint: ['/usr/local/bin/ember']
+npm:
+  <<: *EMBER-CLI-SHARED
+  entrypoint: ['/usr/local/bin/npm']
+bower:
+  <<: *EMBER-CLI-SHARED
+  entrypoint: ['/usr/local/bin/bower', '--allow-root']

@@ -8,36 +8,40 @@ This is my portfolio written in Ember with fast boot.
 You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone` this repository
 * change into the new directory
-* `npm install`
-* `bower install`
+* `docker-compose run --rm npm install`
+* `docker-compose run --rm bower install`
 
 ## Running / Development
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* `docker-compose up -d nginx`
+* Visit your app at [http://localhost](http://localhost).
+
+Note: you may want to create an alias like the following:
+
+`alias dcr="docker-compose run --rm"`
+
+Then you can simply do: `dcr npm install` etc.
 
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
 
+* `docker-compose run --rm ember g ...`
+
 ### Running Tests
 
-* `ember test`
-* `ember test --server`
+* `docker-compose run --rm ember test`
+* `docker-compose run --rm -p 7357:7357 ember test --server`
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+* `docker-compose run --rm ember build` (development)
+* `docker-compose run --rm ember build --environment production` (production)
 
 ### Deploying
 
