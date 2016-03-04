@@ -1,3 +1,29 @@
-<h2 id="title">Welcome to Ember</h2>
+<header>
+  <h1>
+    {{#link-to index}}Dan Gimnicher{{/link-to}}
+  </h1>
+</header>
 
-{{outlet}}
+<main>
+  {{outlet}}
+</main>
+
+<footer>
+  <p>
+    <a target="_blank" href="assets/downloads/resume.pdf">
+      <i title="PDF icon" class="fa fa-lg fa-file-pdf-o"></i>Resume
+    </a>
+    <a href="mailto:dangimnicher@gmail.com">
+      <i title="Envelope icon" class="fa fa-lg fa-envelope-o"></i>Email
+    </a>
+    <a href="//github.com/danjamin">
+      <i title="Github icon" class="fa fa-lg fa-github"></i>Github
+    </a>
+    <a href="//www.linkedin.com/in/dangimnicher">
+      <i title="Linked in icon" class="fa fa-lg fa-linkedin-square"></i>LinkedIn
+    </a>
+  </p>
+  <p class="trademark">
+    All brand icons are trademarks of their respective owners.
+  </p>
+</footer>
