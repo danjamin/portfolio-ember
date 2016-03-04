@@ -1,0 +1,71 @@
+// Responsive
+@import 'variables';
+@import 'mixins';
+
+/*
+ * Media queries for responsive design
+ * These follow after primary styles so they will successfully override.
+ */
+
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+}
+
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)
+   Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  body {
+    min-width: 320px;
+  }
+
+  header {
+    $scale-down-by: 1.3;
+    height: $section-spacing / $scale-down-by;
+
+    > h1 {
+      @include valign-content-in-border-box($section-spacing / 2 / $scale-down-by, $section-spacing / $scale-down-by);
+      text-align: center;
+      margin-left: 0;
+      line-height: $section-spacing / 2 / $scale-down-by;
+      font-size: $section-spacing / 2 / $scale-down-by;
+    }
+  }
+
+  main, footer {
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main {
+    > section {
+      &.sub-header {
+        > h2 {
+          font-size: 22px;
+
+          > br {
+            display: none;
+          }
+        }
+      }
+
+      &.summary {
+        > ul {
+          > li {
+            width: 100%;
+            padding: 0;
+
+            > h3 {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

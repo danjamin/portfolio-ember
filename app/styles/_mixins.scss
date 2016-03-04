@@ -1,0 +1,16 @@
+// Mixins
+@mixin center-content-in-border-box($width, $box-width) {
+  box-sizing: border-box;
+  width: $box-width;
+  $padding: floor(($box-width - $width) / 2);
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin valign-content-in-border-box($height, $box-height) {
+  box-sizing: border-box;
+  height: $box-height;
+  $padding: floor(($box-height - $height) / 2);
+  padding-top: $padding;
+  padding-bottom: $padding;
+}

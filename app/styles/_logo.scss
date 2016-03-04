@@ -1,0 +1,40 @@
+@import 'variables';
+
+i.logo {
+  display: inline-block;
+  width: 100px;
+  height: 96px;
+  background: center center no-repeat;
+
+  &.react-logo {
+    background-image: url("#{$imageRoot}/react.png");
+    background-size: 100px 96px;
+  }
+
+  &.css3-logo {
+    background-image: url("#{$imageRoot}/css3.png");
+    background-size: 64px 64px;
+  }
+
+  &.html5-logo {
+    background-image: url("#{$imageRoot}/html5.png");
+    background-size: 64px 64px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Retina-specific stuff here */
+  i.logo {
+    &.react-logo {
+      background-image: url("#{$imageRoot}/react@2x.png");
+    }
+
+    &.css3-logo {
+      background-image: url("#{$imageRoot}/css3@2x.png");
+    }
+
+    &.html5-logo {
+      background-image: url("#{$imageRoot}/html5@2x.png");
+    }
+  }
+}

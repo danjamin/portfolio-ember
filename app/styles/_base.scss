@@ -1,0 +1,142 @@
+// App Styles
+
+@import 'variables';
+@import 'mixins';
+
+html {
+  -webkit-text-size-adjust: 100%; /* prevent font scaling in landscape */
+}
+
+ul.inline {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+  }
+}
+
+body {
+  min-width: $document-min-width;
+
+  .browsehappy {
+    color: black;
+
+    strong {
+      color: red;
+    }
+  }
+}
+
+section, footer {
+  margin-top: $section-spacing;
+}
+
+main, section, footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main, footer {
+  display: block;
+  width: $document-min-width;
+  max-width: $document-min-width;
+}
+
+header {
+  user-select: none;
+  cursor: default;
+
+  background: $blue;
+  height: $section-spacing;
+  overflow: hidden;
+
+  a, a:active, a:visited {
+    color: white;
+  }
+
+  > h1 {
+    @include valign-content-in-border-box($section-spacing / 2, $section-spacing);
+    text-align: left;
+    margin-left: 20px;
+    line-height: $section-spacing / 2;
+    color: white;
+    font-size: $section-spacing / 2;
+  }
+}
+
+main {
+  /* margin-top: $section-spacing * 2; */
+  margin-bottom: 0;
+  padding: 0;
+
+  > section {
+    &.sub-header {
+      > h2 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 28px;
+      }
+    }
+
+    &.summary {
+      > ul {
+        > li {
+          box-sizing: border-box;
+          width: 25%;
+          padding: 0 10px;
+          text-align: left;
+          vertical-align: top;
+
+          > h3 {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    &.language-images {
+      user-select: none;
+      > ul {
+        > li {
+          margin: 0 4px;
+
+          > a {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  user-select: none;
+
+  margin-bottom: $section-spacing;
+
+  > p {
+    margin: 10px 0;
+
+    > a {
+      display: inline-block;
+      margin: 10px 0;
+      white-space: nowrap;
+
+      > i {
+        width: 30px;
+      }
+
+      &, &:active, &:visited, &:hover {
+        color: $gray;
+      }
+    }
+
+    &.trademark {
+      font-size: 10px;
+      color: $gray-light;
+    }
+  }
+}

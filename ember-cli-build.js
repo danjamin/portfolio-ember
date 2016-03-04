@@ -7,6 +7,9 @@ module.exports = function(defaults) {
     // Add options here
     fingerprint: {
       prepend: 'http://d14bg7m33q3rnp.cloudfront.net/'
+    },
+    sassOptions: {
+      extension: 'scss'
     }
   });
 
