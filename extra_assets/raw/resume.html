@@ -1,0 +1,209 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Dan Gimnicher Resume</title>
+        <meta name="description" content="My resume">
+        <style>
+            body {
+                background: #AAA;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 12pt;
+                color: #222;
+            }
+
+            a, a:active, a:hover, a:visited {
+                color: blue;
+            }
+
+            main {
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                position: relative;
+                margin: auto;
+                border: 1px solid #222;
+                width: 8.5in;
+                height: 11in;
+                background: white;
+                padding: 0.75in;
+            }
+
+            .help-text {
+              color: gray;
+            }
+
+            .inline {
+                display: inline-block;
+            }
+
+            .clearfix {
+                overflow: auto;
+                width: 100%;
+            }
+
+            header, section {
+                margin-bottom: 20px;
+            }
+
+            h1, h2, h3, h4, p, ul {
+                margin: 10px 0;
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 20pt;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 12pt;
+                font-weight: bold;
+            }
+
+            ul.inline {
+                list-style-type: none;
+            }
+
+            ul.inline > li {
+                display: inline-block;
+            }
+
+            section.experience h2,
+            section.education h2 {
+                display: inline-block;
+            }
+
+            section.experience h2 + p,
+            section.education h2 + p {
+                float: right;
+            }
+
+            section.experience h2 + p + p,
+            section.education h2 + p + p {
+                margin-top: 0;
+            }
+
+            ul.contact > li {
+                margin-right: 10px;
+            }
+
+            @media print {
+                body {
+                    background: white;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                a, a:active, a:hover, a:visited {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                main {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1>Dan Gimnicher</h1>
+                <p>
+                    Software engineer with over <strong>6 years</strong> of professional experience
+                </p>
+                <ul class="contact inline">
+                    <li>
+                        <a href="mailto:dangimnicher@gmail.com">
+                            dangimnicher@gmail.com
+                        </a>
+                    </li>
+                    <li>Redwood City, CA</li>
+                    <li>
+                        <a href="http://dan.gimnicher.com">
+                            dan.gimnicher.com
+                        </a>
+                    </li>
+                </ul>
+            </header>
+
+            <section class="languages">
+                <h2 class="inline">Core stack experience</h2>
+                <p>JavaScript, CSS, HTML, Java, PHP, Ember, jQuery, React, Git, SCSS, memcached, MySQL</p>
+                <h2 class="inline">Other experience</h2>
+                <p class="inline help-text">(alphabetical)</p>
+                <p>AngularJS, Babel, Backbone, Bootstrap, Bower, Broccoli, Browserify, Capistrano, Chef, CoffeeScript, Elasticsearch, Flux, Grunt, Gulp.js, Handlebars, Heroku, iOS, Jenkins, Maven, node, npm, Perforce, Redis, Ruby, Spring MVC, svn, Symfony 2, Travis CI, Unix, Vagrant
+                </p>
+            </section>
+
+            <section class="experience">
+                <div class="clearfix">
+                    <h2>Shutterfly Inc., Commerce, Sr. Web Engineer</h2>
+                    <p>July 2014 &ndash; Present</p>
+                    <p>
+                    Developing features, and providing support for the store and cart web experience across all major device types (including A/B testing, omniture tracking, beacons, etc.).  Full stack but also a front end specialist providing code reviews, architectural guidance, and support to both Commerce and other teams at Shutterfly
+                    </p>
+                </div>
+
+                <div class="clearfix">
+                    <h2>Apple, New Product Security Tools, Sr. Software Developer</h2>
+                    <p>July 2013 &ndash; July 2014</p>
+                    <p>
+                        Lead architecture, best practices, code quality, and feature
+                        development of multiple web applications and iOS applications
+                        used across Apple. Worked with off site vendors. Agile
+                        development.
+                    </p>
+                </div>
+
+                <div class="clearfix">
+                    <h2>Apple, Hardware Engineering Tools, Software Developer</h2>
+                    <p>Feb 2012 &ndash; July 2013</p>
+                    <p>
+                        Delivered enterprise, Apple specific, program management
+                        software leveraging a legacy codebase behind RESTful web
+                        services. This large web based application is used by program
+                        managers across Apple to collaborate, present, and report
+                        upwards on key deliverables.
+                    </p>
+                </div>
+
+                <div class="clearfix">
+                    <h2>Apple, Hardware Engineering Tools, Software Developer</h2>
+                    <p>May 2010 &ndash; Feb 2012</p>
+                </div>
+
+                <div class="clearfix">
+                    <h2>Apple, Worldwide Logistics, IT Analyst (Contract)</h2>
+                    <p>July 2009 &ndash; Mar 2010</p>
+                </div>
+                
+                <div class="clearfix">
+                    <h2>UC Davis, Alfalfa Workgroup, Webmaster</h2>
+                    <p>Apr 2008 &ndash; Mar 2009</p>
+                </div>
+            </section>
+
+            <section class="education">
+                <div class="clearfix">
+                    <h2>University of California Davis, Psychology</h2>
+                    <p>Graduated Mar 2009</p>
+                    <p>
+                        Mathematics emphasis, 3.96 GPA
+                    </p>
+                </div>
+
+                <div class="clearfix">
+                    <h2>Cal Poly SLO, Computer Engineering</h2>
+                    <p>Transferred after first year</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
