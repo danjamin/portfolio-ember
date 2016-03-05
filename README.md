@@ -18,8 +18,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `docker-compose up -d nginx`
-* Visit your app at [http://localhost](http://localhost).
+* `docker-compose up -d server`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
 
 Note: you may want to create an alias like the following:
 
@@ -43,6 +43,13 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `docker-compose run --rm ember build` (development)
 * `docker-compose run --rm ember build --environment production` (production)
+
+### Staging
+
+Build the code for production (using local CDN), thne bring up the nginx server
+
+* `docker-compose run --rm -e CDN=local ember build --environment production`
+* `docker-compose -f docker-compose-staging.yml up -d server`
 
 ### Deploying
 
