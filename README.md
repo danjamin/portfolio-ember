@@ -23,7 +23,8 @@ You will need the following things properly installed on your computer.
 
 Note: you may want to create an alias like the following:
 
-`alias dcr="docker-compose run --rm"`
+* `alias dc="docker-compose"`
+* `alias dcr="dc run --rm"`
 
 Then you can simply do: `dcr npm install` etc.
 
