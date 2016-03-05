@@ -1,0 +1,14 @@
+<section class="sub-header">
+  <h2>Experience</h2>
+</section>
+
+{{pie-chart data=model selectedSeedColor=chartColor}}
+
+{{#each model as |language|}}
+  {{#if language.children}}
+    <h3>{{language.label}}</h3>
+    {{horizontal-bar-chart data=language.children
+        sortKey="value"
+        selectedSeedColor=chartColor}}
+  {{/if}}
+{{/each}}
