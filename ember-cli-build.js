@@ -9,9 +9,6 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
     fingerprint: {
-      prepend: (process.env.CDN === 'local' ?
-        'http://localhost:8080/' :
-        'http://d14bg7m33q3rnp.cloudfront.net/'),
       extensions: defaultExtensions.concat(['pdf'])
     },
     sassOptions: {
