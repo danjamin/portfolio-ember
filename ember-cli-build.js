@@ -4,10 +4,15 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var Funnel = require('broccoli-funnel');
 
 module.exports = function(defaults) {
+  const defaultExtensions = ['js', 'css', 'png', 'jpg', 'gif', 'map']
+
   var app = new EmberApp(defaults, {
     // Add options here
     fingerprint: {
-      prepend: process.env.CDN === 'local' ? 'http://localhost:8080/' : 'http://d14bg7m33q3rnp.cloudfront.net/'
+      prepend: (process.env.CDN === 'local' ?
+        'http://localhost:8080/' :
+        'http://d14bg7m33q3rnp.cloudfront.net/'),
+      extensions: defaultExtensions.concat(['pdf'])
     },
     sassOptions: {
       extension: 'scss'
