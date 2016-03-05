@@ -1,7 +1,6 @@
 {
   "name": "portfolio-ember",
-  "version": "0.0.0",
-  "description": "Portfolio written in Ember with fast boot",
+  "description": "Portfolio written in Ember",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Dan Gimnicher",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",

@@ -1,7 +1,7 @@
 # portfolio-ember
 
 This README outlines the details of collaborating on this Ember application.
-This is my portfolio written in Ember with fast boot.
+This is my portfolio written in Ember.
 
 ## Prerequisites
 
